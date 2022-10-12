@@ -12,9 +12,12 @@ python3 -m venv env
 ```
 Activate your virtual environment:
 ```bash
-source luxenv/bin/activate
+source env/bin/activate
 ```
-
+Then run app
+```bash
+python3 main.py
+```
 ## Docker (will be soon)
 
 You can start the project with docker using this command:

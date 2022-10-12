@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="510ab3b1-775e-47fc-b764-475afdad0f70" name="Changes" comment="init application" />
+    <list default="true" id="510ab3b1-775e-47fc-b764-475afdad0f70" name="Changes" comment="add template">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,7 +156,8 @@
       <updated>1665486677645</updated>
       <workItem from="1665486680738" duration="3521000" />
       <workItem from="1665563069391" duration="10345000" />
-      <workItem from="1665575308252" duration="2749000" />
+      <workItem from="1665575308252" duration="4063000" />
+      <workItem from="1665604182259" duration="496000" />
     </task>
     <task id="LOCAL-00001" summary="init application">
       <created>1665577734082</created>
@@ -159,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665577734082</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add template">
+      <created>1665578214858</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665578214858</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +192,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init application" />
-    <option name="LAST_COMMIT_MESSAGE" value="init application" />
+    <MESSAGE value="add template" />
+    <option name="LAST_COMMIT_MESSAGE" value="add template" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/employee_knowledge_control_project_internship$main.coverage" NAME="main Coverage Results" MODIFIED="1665576472146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
