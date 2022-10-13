@@ -14,21 +14,23 @@ Activate your virtual environment:
 ```bash
 source env/bin/activate
 ```
-Then run app
+Then you need to install required modules:
 ```bash
-python3 main.py
+pip install fastapi
+pip install uvicorn
 ```
-## Docker (will be soon)
+## requirements.txt
+Add necessary packages:
+```bash
+pip freeze > requirements.txt
+```
+
+## Docker 
 
 You can start the project with docker using this command:
 
 ```bash
+docker-compose up --build
 ```
 
-If you want to develop in docker with autoreload add `-f deploy/docker-compose.dev.yml` to your docker command.
-Like this:
-
-```bash
-```
-
-This command exposes the web application on port 8080, mounts current directory
+This command exposes the web application on port 5000, mounts current directory
