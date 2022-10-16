@@ -5,7 +5,39 @@ services:
     build:
       context: "."
       dockerfile: ./docker/python/Dockerfile
+    restart: always
+    env_file:
+      - .env
     ports:
       - 5000:5000
     volumes:
       - .:/app
+    depends_on:
+      - database
+      - redis
+
+  database:
+    image: postgres:13-alpine
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=${SQL_USER}
+      - POSTGRES_PASSWORD=${SQL_PASSWORD}
+      - POSTGRES_DB=${SQL_DATABASE}
+
+  redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - "6379:6379"
+    environment:
+      - REDIS_HOST=redis
+    volumes:
+      - redis_data:/data
+
+volumes:
+  postgres_data:
+  redis_data:

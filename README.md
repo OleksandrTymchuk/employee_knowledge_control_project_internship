@@ -3,34 +3,28 @@
 ## Virtual environment
 Installing virtual environment:
 
-```bash
+bash
 pip3 install virtualenv
-```
 Create a virtual environment:
-```bash
+bash
 python3 -m venv env
-```
 Activate your virtual environment:
-```bash
+bash
 source env/bin/activate
-```
 Then you need to install required modules:
-```bash
+bash
 pip install fastapi
 pip install uvicorn
-```
 ## requirements.txt
 Add necessary packages:
-```bash
+bash
 pip freeze > requirements.txt
-```
 
 ## Docker 
 
 You can start the project with docker using this command:
 
-```bash
+bash
 docker-compose up --build
-```
 
 This command exposes the web application on port 5000, mounts current directory
