@@ -1,4 +1,3 @@
-import aioredis
 import databases
 import uvicorn as u
 from fastapi import FastAPI
@@ -7,6 +6,11 @@ from fastapi.middleware.cors import CORSMiddleware
 
 db = databases.Database(settings.DATABASE_URL)
 app = FastAPI()
+
+
+@app.get("/")
+def health_check():
+    return {"status": "Working"}
 
 
 app.add_middleware(
@@ -21,20 +25,14 @@ app.add_middleware(
 
 
 # @app.on_event("startup")
-# async def startup():
-#     await db.connect()
-#     app.state.redis = await aioredis.from_url(settings.REDIS_URL)
-#
-#
+# def startup():
+#     init_db()
+
+
 # @app.on_event("shutdown")
 # async def shutdown():
-#     await db.disconnect()
+#     await database.disconnect()
 #     await app.state.redis.close()
-
-
-@app.get("/")
-def health_check():
-    return {"status": "Working"}
 
 
 if __name__ == '__main__':
