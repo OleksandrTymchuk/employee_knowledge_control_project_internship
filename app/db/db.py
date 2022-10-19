@@ -1,4 +1,3 @@
-import os
 import sqlalchemy
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -7,13 +6,10 @@ from config import settings
 
 DATABASE_URL = settings.DATABASE_URL
 
-engine = create_engine(settings.DATABASE_URL)
+engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
-
-def init_db():
-    sqlalchemy.MetaData.create_all(engine)
 
 
 # async def async_main():

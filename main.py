@@ -1,8 +1,9 @@
 import databases
 import uvicorn as u
 from fastapi import FastAPI
-from config import settings
 from fastapi.middleware.cors import CORSMiddleware
+import asyncpg
+from config import settings
 
 db = databases.Database(settings.DATABASE_URL)
 app = FastAPI()
@@ -24,15 +25,14 @@ app.add_middleware(
 )
 
 
-# @app.on_event("startup")
-# def startup():
-#     init_db()
+@app.on_event("startup")
+async def startup():
+    await db.connect()
 
 
-# @app.on_event("shutdown")
-# async def shutdown():
-#     await database.disconnect()
-#     await app.state.redis.close()
+@app.on_event("shutdown")
+async def shutdown():
+    await db.disconnect()
 
 
 if __name__ == '__main__':
