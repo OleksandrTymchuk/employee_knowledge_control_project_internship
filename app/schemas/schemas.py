@@ -1,4 +1,9 @@
 from pydantic import BaseModel, EmailStr
+from typing import List
+
+
+class UserBase(BaseModel):
+    email: EmailStr
 
 
 class User(BaseModel):
@@ -7,10 +12,7 @@ class User(BaseModel):
     password: str
     email: EmailStr
     password: str
-
-
-class UserBase(BaseModel):
-    email: EmailStr
+    user_base: List[UserBase]
 
 
 class SignIn(UserBase):
@@ -31,6 +33,7 @@ class UserUpdate(UserBase):
 class UsersList(UserBase):
     email: str
     pagination: list
+    users: List[User]
 
 
 class Config:
